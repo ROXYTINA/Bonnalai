@@ -1,0 +1,11 @@
+@echo off
+REM File upload request to the Bonnalai API
+REM Use this command to upload files to the API
+
+curl.exe -X POST http://localhost:3000/stuff ^
+  -F "file=@D:\year4\YEAR 4 Documents\S1\Computer Architecture\02. Parallel architecture fundamental.pdf" ^
+  -F "subject=Computer Architecture" ^
+  -F "department=GIC" ^
+  -F "fileName=Parallel Architecture" ^
+  -F "fileCode=CA"
+

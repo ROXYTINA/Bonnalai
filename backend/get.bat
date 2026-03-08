@@ -1,0 +1,1 @@
+curl.exe -X GET http://localhost:3000/stuff

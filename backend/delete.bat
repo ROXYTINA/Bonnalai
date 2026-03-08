@@ -1,0 +1,1 @@
+curl.exe -X DELETE http://localhost:3000/stuff/11
