@@ -1,15 +1,22 @@
-import {Module} from "@nestjs/common";
-import {TypeOrmModule} from "@nestjs/typeorm";
-import {files} from "./stuff.entities";
-import {StuffController} from "./stuff.controller";
-import {StuffService} from "./stuff.service";
+import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import { Document, DocumentSchema, OtherDocument, OtherDocumentSchema, Subject, SubjectSchema, Year, YearSchema } from './entities/bonalai.entities.js';
+import { StuffController } from './stuff.controller.js';
+import { StuffService } from './stuff.service.js';
 
 
 @Module({
-    imports:[TypeOrmModule.forFeature([files])],
-    controllers:[StuffController],
-    providers:[StuffService],
-    exports: [TypeOrmModule]
+    imports: [
+        MongooseModule.forFeature([
+            { name: Year.name, schema: YearSchema },
+            { name: Subject.name, schema: SubjectSchema },
+            { name: Document.name, schema: DocumentSchema },
+            { name: OtherDocument.name, schema: OtherDocumentSchema },
+        ]),
+    ],
+    controllers: [StuffController],
+    providers: [StuffService],
+    exports: [MongooseModule],
 })
 
 export class StuffModule {}

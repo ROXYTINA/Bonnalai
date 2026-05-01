@@ -1,14 +1,16 @@
-import { IsString, IsOptional, IsBoolean } from 'class-validator';
+import { IsString, IsOptional } from 'class-validator';
 
 export class CreateStuffDto {
     @IsString()
-    name: string;
+    title: string;
 
     @IsOptional()
     @IsString()
     description?: string;
 
-    @IsOptional()
-    @IsBoolean()
-    isActive?: boolean;
+    @IsString()
+    subjectId: string;
+
+    @IsString()
+    yearId: string;
 }

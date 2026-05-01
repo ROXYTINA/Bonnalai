@@ -1,7 +1,1 @@
-{
-  "recommendations": [
-    "Vue.volar",
-    "vitest.explorer",
-    "esbenp.prettier-vscode"
-  ]
-}
+{ "recommendations": ["expo.vscode-expo-tools"] }
