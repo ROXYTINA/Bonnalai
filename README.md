@@ -337,7 +337,7 @@ UNLICENSED - Proprietary project
 
 ## 👥 Development Team
 
-Developed as a full-stack educational platform.
+Developed as a full-stack educational platform. BY ROXYTINA.
 
 ---
 
